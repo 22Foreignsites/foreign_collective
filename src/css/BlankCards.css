@@ -1,0 +1,56 @@
+.blank-cards{
+    display: grid;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.blank-card{
+    background: #e6f0ff; /* pale blue fallback */
+    border-radius: 8px;
+    height: 120px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06) inset;
+}
+
+.blank-card--img{
+    border: 2px solid rgba(0,0,0,0.06);
+}
+
+/* Optional overlay if you want a darker overlay on images */
+.blank-card::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.blank-card__label{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.717); 
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.blank-card__link{ display: inline-block; color: inherit; text-decoration: none; }
+.blank-card__link:focus, .blank-card__link:hover{
+    filter: brightness(0.92);
+    /* preserve horizontal centering (translateX(-50%)) and move up slightly */
+    transform: translate(-50%, calc(-50% - 2px));
+}
+
+.blank-card{ position: relative; overflow: hidden; }
+
+@media (min-width: 768px){
+    .blank-card{ height: 160px; }
+}

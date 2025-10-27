@@ -1,0 +1,10 @@
+/* target the img inside elements with class 'gallery-items' */
+.gallery-items img{
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.gallery-items{
+      background-color: grey;
+}

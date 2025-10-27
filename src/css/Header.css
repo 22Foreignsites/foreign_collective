@@ -1,0 +1,24 @@
+#header{
+    background-color: #FDF5E2;
+    color: #F28729;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* center horizontally */
+}
+
+#header ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+#header a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#header #logo {
+    height: 60px;
+    margin-right: 20px;
+}
