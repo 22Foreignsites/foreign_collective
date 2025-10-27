@@ -1,0 +1,36 @@
+.scholarship-winners{
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 12px;
+}
+
+.scholarship-winner{
+	display: flex;
+	align-items: stretch;
+	background: #fff;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.scholarship-winner__text{
+	flex: 0 0 70%;
+	padding: 16px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.scholarship-winner__image{
+	flex: 0 0 30%;
+	background-size: cover;
+	background-position: center;
+	min-height: 160px;
+}
+
+@media (max-width: 767px){
+	.scholarship-winner{ flex-direction: column; }
+	.scholarship-winner__text{ flex: none; }
+	.scholarship-winner__image{ flex: none; width: 100%; min-height: 200px; }
+}
