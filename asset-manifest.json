@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/foreign_collective/static/css/main.beb10fc5.css",
+    "main.js": "/foreign_collective/static/js/main.5c3325ff.js",
+    "static/media/spartan.jpeg": "/foreign_collective/static/media/spartan.7b8a0c2aa49b22365cdb.jpeg",
+    "static/media/volunteer.jpeg": "/foreign_collective/static/media/volunteer.c541a4a54ec57f5ef57f.jpeg",
+    "static/media/merch1t.jpeg": "/foreign_collective/static/media/merch1t.110416df9fa3a84959f7.jpeg",
+    "static/media/contact1.webp": "/foreign_collective/static/media/contact1.5347075142a4686fd621.webp",
+    "static/media/trash.jpeg": "/foreign_collective/static/media/trash.ae31b6333bc2be66d63d.jpeg",
+    "static/media/house.jpg": "/foreign_collective/static/media/house.36c7c4cce46b899c832e.jpg",
+    "static/media/logo1.jpg": "/foreign_collective/static/media/logo1.1d6fc084d2fc1f58b5e5.jpg",
+    "static/media/Shirt.avif": "/foreign_collective/static/media/Shirt.5183a80b02b96e6d522d.avif",
+    "index.html": "/foreign_collective/index.html",
+    "main.beb10fc5.css.map": "/foreign_collective/static/css/main.beb10fc5.css.map",
+    "main.5c3325ff.js.map": "/foreign_collective/static/js/main.5c3325ff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.beb10fc5.css",
+    "static/js/main.5c3325ff.js"
+  ]
+}
