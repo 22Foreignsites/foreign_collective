@@ -1,3 +1,65 @@
 .introduction-content {
     background-color: #919615;
 }
+
+.introduction-content {
+    padding: 20px; /* keep some inner spacing */
+}
+
+.introduction-content .intro-inner{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.introduction-content .intro-icon{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.introduction-content .intro-icon img{
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+}
+
+.introduction-content .intro-text h2,
+.introduction-content .intro-text p{
+    margin: 8px 0;
+}
+
+.introduction-content .intro-text p{
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+.cards{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 24px;
+ 
+}
+
+/* Responsive: stack icon above text on small screens */
+@media (max-width: 680px){
+    .introduction-content .intro-inner{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .introduction-content .intro-icon img{
+        width: 64px;
+        height: 64px;
+    }
+}
+/* .facts-list {
+    background-color: #919615;
+    padding: 12px;
+    border-radius: 8px;
+} */
+
+
+/* .fact-item{ display:flex; gap:16px; align-items:flex-start; margin-bottom:16px; }
+.fact-icon{ width:60px; height:60px; border-radius:50%; background:#f59e0b; display:inline-block; flex:0 0 60px; background-size:60px 60px; background-position:center; background-repeat:no-repeat; }
+.fact-text{ flex:1 } */

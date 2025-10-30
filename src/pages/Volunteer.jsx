@@ -1,13 +1,19 @@
 import ".././css/VolunteerBoxes.css";
+import ".././css/Volunteer.css";
+import BigHeader from "../components/BigHeader.jsx";
 import VolunteerBoxes from "../components/VolunteerBoxes.jsx";
 import trash from "../images/trash.jpeg";
 import Community from "../images/volunteer.jpeg";
 import logo from "../images/logo1.jpg";
+import leaf from "../images/leaf.png";
+import nature from "../images/nature.webp"
+import cocky from "../images/cocky.jpeg";
 
 const Volunteer = () => {
 	return (
+		<> 
+		<BigHeader image={cocky} title={"Volunteer"} />
 		<div id="volunteer">
-			<h1>Volunteer</h1>
 			<VolunteerBoxes items={[
 
 				{
@@ -30,8 +36,8 @@ const Volunteer = () => {
 				},
 				// Add more volunteer opportunities as needed
 			]} />
-			<p>Check out our volunteer opportunities here.</p>
 		</div>
+		</>
 	);
 };
 export default Volunteer;

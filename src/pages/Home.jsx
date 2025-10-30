@@ -1,35 +1,39 @@
 import "./../css/Home.css";
+import "./../css/Slideshow.css";
 import BigHeader from "../components/BigHeader";
 import spartanImg from "../images/spartan.jpeg";
 import BlankCards from "../components/BlankCards";
+import Flashcards from "../components/Flashcards";
 import Shirt from "../images/Shirt.avif";
 import team from "../images/contact1.webp";
 import volunteer from "../images/volunteer.jpeg";
+import world from "../ImgIcon/world.png";
 import { href } from "react-router-dom";
+import Slideshow from "../components/Slideshow";
 
 const Home = () => {
     return(
         <> 
-            <BigHeader image={spartanImg} position="center" title="Bringing People Together" subtitle="Remind the world that our differences connect us, shape us, and make us stronger together." />
+            {/* <BigHeader image={spartanImg} position="center" title="Bringing People Together" subtitle="Remind the world that our differences connect us, shape us, and make us stronger together." /> */}
 
-        <div id = "introduction" className = "introduction-content">
-            <h1>Foreign Collective</h1>
-            <p>Uniting diverse voices for a brighter future.</p>
+            <Slideshow/>
+
+        <div id="Making Difference" className="introduction-content">
+            <div className="intro-inner">
+                <div className="intro-icon" aria-hidden>
+                    <img src={world} alt="world icon" />
+                </div>
+                <div className="intro-text">
+                    <h2>Making a Difference</h2>
+                    <p>At The Foreign Collective, were a nonprofit doing direct, grassroots work to strengthen local communities. We began by selling merchandise and sharing our story on social media; anyone can support us by buying our products or joining the team. Every purchase and every volunteer helps fund projects that improve neighborhoods and uplift people, celebrating how our differences connect and make us stronger.</p>
+                </div>
+            </div>
         </div>
 
-        <div id = "list" className = "facts-list">
-            <h2>What we're about</h2>
-                <ul>
-                    <li>We are a non-profit group that helps local communities.</li>
-                    <li>We started by selling merch and sharing on social media.</li>
-                    <li>Anyone can help by buying cool products or joining our team.</li>
-                    <li>Every sale and every supporter helps us make real change.</li>
-                    <li>We work together to help people and neighborhoods directly.</li>
-                    <li>At The Foreign Collective, we honor the beauty of being foreign. Our mission is to remind the world that our differences connect us, shape us, and make us stronger together.</li>
-                </ul>
-        </div>
-
-        <BlankCards images={[Shirt, team, volunteer]} labels={['Merch', 'Contact', 'Volunteer']} items={[{ href: '/merch', label: 'Merch' }, { href: '/contact', label: 'Contact' }, { href: '/volunteer', label: 'Volunteer' }]} />
+    <div className = "cards"> 
+    <BlankCards images={[Shirt, team, volunteer]} labels={['Merch', 'Contact', 'Volunteer']} items={[{ href: '/merch', label: 'Merch' }, { href: '/contact', label: 'Contact' }, { href: '/volunteer', label: 'Volunteer' }]} />
+    </div>
+     <Flashcards />
 
         </>
     );

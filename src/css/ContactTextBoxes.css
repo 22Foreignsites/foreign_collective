@@ -1,14 +1,59 @@
-.contact-textboxes{
-  display: column;
+
+/* Styled to match the provided layout: large dark input boxes and a prominent send CTA */
+#contact .contact-textboxes{
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 18px;
+  align-items: start;
 }
 
-.ctb-field{ display:flex; flex-direction:column; }
-.ctb-label{ font-weight:600; margin-bottom:6px; }
-.ctb-input, .ctb-textarea{ padding:8px 10px; border:1px solid rgba(0,0,0,0.12); border-radius:6px; }
-.ctb-textarea{ min-height:120px; resize:vertical; }
+/* helpers for layout */
+#contact .ctb-half{ grid-column: auto; }
+#contact .ctb-full{ grid-column: 1 / -1; }
+
+#contact .ctb-field{ display:block; position:relative; }
+
+/* The visible input box: dark background with thin light border */
+/* inputs should visually match the page background */
+#contact .ctb-input,
+#contact .ctb-textarea{
+  background: inherit; /* use same bg as the page */
+  color: inherit;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 28px 20px 20px 20px; /* top padding leaves room for label text inside */
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+#contact .ctb-textarea{ min-height:220px; resize:vertical }
+
+#contact .ctb-label{
+  position: absolute;
+  left: 18px;
+  top: 10px;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.15rem;
+  font-weight:600;
+  pointer-events: none;
+}
+
+/* Actions */
+#contact .ctb-actions{ display:flex; align-items:center; padding-top:18px }
+#contact .ctb-submit{
+  background: #F28729; 
+  color: #000000;
+  border: none;
+  padding: 14px 44px; /* slightly smaller */
+  margin-bottom: 12px;
+  border-radius: 48px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+}
 
 @media (max-width: 640px){
-  .contact-textboxes{ grid-template-columns: 1fr; }
+  #contact .contact-textboxes{ grid-template-columns: 1fr; }
+  #contact .ctb-submit{ width: 140px; }
 }

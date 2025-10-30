@@ -7,7 +7,7 @@
 }
 
 .volunteer-box{
-	background: #f0f7ff; 
+	background: #48b0d9ba; 
 	border-radius: 8px;
 	padding: 0; 
 	box-shadow: 0 1px 3px rgba(0,0,0,0.06);
@@ -32,7 +32,7 @@
 .volunteer-box__cta{
 	display: inline-block;
 	margin-top: 12px;
-	background: #0054ff;
+	background: #F28729;
 	color: #fff;
 	padding: 8px 12px;
 	border-radius: 6px;

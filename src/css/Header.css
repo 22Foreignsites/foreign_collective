@@ -4,13 +4,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; /* center horizontally */
+    justify-content: center; /* logo left, nav right */
+    padding: 12px 24px;
 }
 
-#header ul{
+/* Desktop nav */
+#header .nav ul{
     display: flex;
-    gap: 50px;
+    gap: 40px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #header a{
@@ -21,4 +25,73 @@
 #header #logo {
     height: 60px;
     margin-right: 20px;
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger{
+    display: none;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+}
+.hamburger span{
+    display: block;
+    height: 3px;
+    background: #F28729;
+    margin: 5px 0;
+    transition: transform .25s ease, opacity .2s ease;
+}
+.hamburger.is-active span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+.hamburger.is-active span:nth-child(2){ opacity: 0; }
+.hamburger.is-active span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+
+/* Mobile nav hidden by default */
+.nav{ display: block; }
+.nav.open{ display: block; }
+
+@media (max-width: 768px){
+    .hamburger{ display: block; }
+
+    /* Make nav in-flow so it occupies space and pushes page content down when opened. */
+    /* Keep the header layout in a single row but allow the nav to take full width below. */
+    #header{ flex-wrap: wrap; }
+
+    /* nav is hidden by default and becomes a full-width block when open */
+    .nav{ display: none;  flex-basis: 100%; position: static; border-radius: 6px; ; margin-top: 8px; }
+    .nav.open{ display: block; }
+    .nav ul{ display: flex; flex-direction: column; gap: 12px; padding: 12px 18px; margin: 0; }
+
+    /* ensure elements order: logo + hamburger on the first row, nav below */
+    #logo{ order: 1; }
+    .hamburger{ order: 2; }
+    .nav{ order: 3; }
+
+    /* Make each nav item look like a pill / box with a border */
+
+#header .nav ul{
+    background-color: transparent;
+    display: flex;
+    gap: 0px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li{
+    font-size: 24px;
+    border: 1px solid #F28729;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background: #fff;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: inherit;
+    display: block; /* ensures the clickable area includes the padding */
+}
+
 }

@@ -2,7 +2,7 @@
 .big-header{
 	background-size: cover;
 	/* background-position: center; */
-    height: 320px;
+    height: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -10,7 +10,33 @@
 	color: #fff;
 }
 
+.big-header__video{
+	position: absolute;
+	inset: 0; /* top:0; right:0; bottom:0; left:0 */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+.big-header__img{
+	/* Keep the image behind the overlay and allow it to scale while maintaining aspect ratio */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	object-position: center;
+	z-index: 0;
+}
+
 .big-header__overlay{
+	position: relative;
+	z-index: 1; /* sits above background image/video */
 	background: rgba(0,0,0,0.45);
 	padding: 24px 32px;
 	text-align: center;

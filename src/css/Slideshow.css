@@ -1,0 +1,19 @@
+/* Reuse big-header layout for slides */
+.slideshow .big-header__overlay{ background: rgba(0,0,0,0.35); padding: 12px 18px; }
+
+/* arrows sit above the background */
+.slideshow .arrow{
+    color:#111;
+    text-decoration: none;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.85);
+    border-radius: 4px;
+    padding: 6px 10px;
+    z-index: 2;
+}
+
+.slideshow #right-arrow{ right: 4%; }
+.slideshow #left-arrow{ left: 4%; }

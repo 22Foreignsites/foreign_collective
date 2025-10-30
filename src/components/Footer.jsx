@@ -6,7 +6,6 @@ const Footer = () => { //You can add a double nav instead of adding a footer and
         <div id = "footer">
             <ul>
             <li><Link to ="/">Home</Link></li>
-            <li><Link to ="/merch">Merch</Link></li>
             <li><Link to ="/contact">Contact</Link></li>
             <li><Link to = "/volunteer">Volunteer</Link></li>
             <li><Link to = "/scholarship">Scholarship</Link></li>
