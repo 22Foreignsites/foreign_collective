@@ -3,13 +3,13 @@
 
 /* arrows sit above the background */
 .slideshow .arrow{
-    color:#111;
+    color:#F28729;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 4.25rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.85);
+    /* background: #F2E6D8; */
     border-radius: 4px;
     padding: 6px 10px;
     z-index: 2;

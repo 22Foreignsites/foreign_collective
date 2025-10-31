@@ -1,5 +1,5 @@
 import "../css/Slideshow.css";
-import {useState} from "react";
+import { useState, useEffect, useRef } from "react";
 
 // const Slideshow = () => {
 //     const[slideIndex, setSlideIndex] = useState(0);
@@ -30,8 +30,10 @@ import {useState} from "react";
 // }
 
 
-const Slideshow = () => {
+const Slideshow = ({ delay = 4000, pauseOnHover = false }) => {
     const [slideIndex, setSlideIndex] = useState(0);
+    const [paused, setPaused] = useState(false);
+    const intervalRef = useRef(null);
 
     const importAll = (resource) => {
         return resource.keys().map(resource);
@@ -53,8 +55,27 @@ const Slideshow = () => {
 
     const current = images[slideIndex];
 
+    useEffect(() => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        if (!paused) {
+            intervalRef.current = setInterval(() => {
+                setSlideIndex(s => (s < images.length - 1 ? s + 1 : 0));
+            }, delay);
+        }
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [paused, delay, images.length]);
+
     return (
-        <header className="big-header slideshow" style={{ backgroundImage: `url(${current})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
+        <header
+            className="big-header slideshow"
+            style={{ backgroundImage: `url(${current})`, backgroundPosition: 'center', backgroundSize: 'cover' }}
+            onMouseEnter={() => pauseOnHover && setPaused(true)}
+            onMouseLeave={() => pauseOnHover && setPaused(false)}
+            onTouchStart={() => pauseOnHover && setPaused(true)}
+            onTouchEnd={() => pauseOnHover && setPaused(false)}
+        >
             <a className="arrow" id="left-arrow" href="#" onClick={slideBackward} aria-label="Previous slide">&lt;</a>
             <a className="arrow" id="right-arrow" href="#" onClick={slideForward} aria-label="Next slide">&gt;</a>
             <div className="big-header__overlay">
