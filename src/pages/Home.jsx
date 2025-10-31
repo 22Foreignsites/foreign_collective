@@ -10,6 +10,7 @@ import volunteer from "../images/volunteer.jpeg";
 import world from "../ImgIcon/world.png";
 import { href } from "react-router-dom";
 import Slideshow from "../components/Slideshow";
+import HoneyBadger from "../images/HoneyBadger.webp";
 
 const Home = () => {
     return(
@@ -31,7 +32,7 @@ const Home = () => {
         </div>
 
     <div className = "cards"> 
-    <BlankCards images={[Shirt, team, volunteer]} labels={['Merch', 'Contact', 'Volunteer']} items={[{ href: '/merch', label: 'Merch' }, { href: '/contact', label: 'Contact' }, { href: '/volunteer', label: 'Volunteer' }]} />
+    <BlankCards images={[volunteer, HoneyBadger, team]} labels={['Volunteer', 'Scholarship', 'Contact']} items={[{ href: '/volunteer', label: 'Volunteer' }, { href: '/Scholarship', label: 'Scholarship' }, { href: '/contact', label: 'Contact' }]} />
     </div>
      <Flashcards />
 

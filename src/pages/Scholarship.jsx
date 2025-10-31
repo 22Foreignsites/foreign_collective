@@ -33,7 +33,7 @@ const Scholarship = () => {
 					desc:"Made for the scrappiest individuals who will stop at nothing to achieve their dreams. This scholarship celebrates those who move with purpose, not privilege — the ones who keep pushing, even when the odds say stop.Like the honey badger, you might not be the biggest, fastest, or strongest, but you’ve got the heart and grit to keep going when others quit.",
 					// "Made for the scrappiest individuals who will stop at nothing to achieve their dreams."
 					// "Made for the scrappiest individuals who will stop at nothing to achieve their dreams. This scholarship celebrates those who move with purpose, not privilege — the ones who keep pushing, even when the odds say stop.Like the honey badger, you might not be the biggest, fastest, or strongest, but you’ve got the heart and grit to keep going when others quit. You dream boldly, fight fiercely, and rest only to rise again stronger.This scholarship exists to back that spirit — to invest in those who dare to chase their dreams with unshakable determination, no matter where they start or how many times they fall."
-					href: "/scholarship/1"
+					href: "#"
 				},
 				// Add more scholarship items as needed
 			]} />

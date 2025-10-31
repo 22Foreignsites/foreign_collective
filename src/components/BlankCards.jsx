@@ -19,14 +19,15 @@ const BlankCards = ({ items = [], images = [], labels = [], count = 3, columns =
 				aria-label={img ? `card ${i + 1}` : undefined}
 			>
 				{label && href ? (
-					<a
-						className="blank-card__label blank-card__link"
-						href={href}
-						target={target}
-						rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-					>
-						{label}
-					</a>
+					href.startsWith('/') ? (
+						<Link className="blank-card__label blank-card__link" to={href}>
+							{label}
+						</Link>
+					) : (
+						<a className="blank-card__label blank-card__link" href={href} target={target} rel={target === '_blank' ? 'noopener noreferrer' : undefined}>
+							{label}
+						</a>
+					)
 				) : (
 					label && <div className="blank-card__label">{label}</div>
 				)}

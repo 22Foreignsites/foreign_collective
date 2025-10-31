@@ -20,19 +20,19 @@ const Volunteer = () => {
 					title: "Volunteering Individually",
 					text: "Help us plan and execute community events.",
 					img: trash,
-					href: "/volunteer/event-organizer"
+					href: "#"
 				},
 				{
 					title: "Community Clean-Up",
 					text: "Join us for a day of cleaning up our local parks.",
 					img: Community,
-					href: "/volunteer/community-cleanup"
+					href: "#"
 				},
 				{
 					title: "Food Drive",
 					text: "Help us collect food for those in need.",
 					img: logo,
-					href: "/volunteer/food-drive"
+					href: "#"
 				},
 				// Add more volunteer opportunities as needed
 			]} />
