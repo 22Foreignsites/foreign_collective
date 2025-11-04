@@ -1,0 +1,46 @@
+.cards-carousel{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  position:relative;
+}
+
+.cards-track{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:18px;
+  flex:1 1 auto;
+}
+
+.ccard{
+  background:#fff;
+  border-radius:6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height: 220px;
+}
+.ccard,
+.ccard a {
+  text-decoration: none !important;
+  color: inherit;
+}
+.ccard-media{
+  height:200px;
+  background-size:cover;
+  background-position:center;
+}
+.ccard-body{ padding:14px; display:flex; flex-direction:column; gap:8px; flex:1; background:#888C16 }
+.ccard-title{ color:#ffff; margin:0; font-size:1.15rem;}
+.ccard-meta{ color:#555; font-weight:600 }
+.ccard-desc{ color:#fff; margin:0; flex:1 }
+.ccard-link{ margin-top:8px; display:inline-block; color:#fff ; text-decoration: none; font-weight:bold; }
+
+.carousel-arrow{ background:transparent; border:none; font-size:2rem; color:#F28729; cursor:pointer }
+.carousel-prev{ margin-right:6px }
+.carousel-next{ margin-left:6px }
+
+@media (max-width: 900px){
+  .cards-track{ grid-template-columns: repeat(1, 1fr); }
+}
