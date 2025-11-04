@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/foreign_collective/static/css/main.65d88f4f.css",
-    "main.js": "/foreign_collective/static/js/main.67fc324a.js",
+    "main.css": "/foreign_collective/static/css/main.3da81059.css",
+    "main.js": "/foreign_collective/static/js/main.be5756ba.js",
     "static/media/movie.mp4": "/foreign_collective/static/media/movie.e75da60f286eee57632a.mp4",
     "static/media/nb.png": "/foreign_collective/static/media/nb.3c68496f533379c438bd.png",
     "static/media/leaf.png": "/foreign_collective/static/media/leaf.358a0392eb5f3a1e6f98.png",
@@ -16,8 +16,14 @@
     "static/media/contact1.webp": "/foreign_collective/static/media/contact1.5347075142a4686fd621.webp",
     "static/media/stuco.jpeg": "/foreign_collective/static/media/stuco.105a8a9c11ac84f7d03a.jpeg",
     "static/media/trash.jpeg": "/foreign_collective/static/media/trash.ae31b6333bc2be66d63d.jpeg",
+    "static/media/SoupKitchen.webp": "/foreign_collective/static/media/SoupKitchen.e585d76c778ca63a5766.webp",
     "static/media/house.jpg": "/foreign_collective/static/media/house.36c7c4cce46b899c832e.jpg",
+    "static/media/Marathon.webp": "/foreign_collective/static/media/Marathon.a5b97070c04b9083e43c.webp",
+    "static/media/ParkCleanUp.webp": "/foreign_collective/static/media/ParkCleanUp.18c66e6544f2d6cef100.webp",
+    "static/media/HighwayCleanup.webp": "/foreign_collective/static/media/HighwayCleanup.898cf469036d5967057a.webp",
+    "static/media/IndvVol.webp": "/foreign_collective/static/media/IndvVol.ead99bd44c96129dc580.webp",
     "static/media/HoneyBadgerA.webp": "/foreign_collective/static/media/HoneyBadgerA.cf21052c50238fd6b619.webp",
+    "static/media/AnimalShelter.webp": "/foreign_collective/static/media/AnimalShelter.4375b00578635e4c2a97.webp",
     "static/media/exp.avif": "/foreign_collective/static/media/exp.93e10916721e23854f89.avif",
     "static/media/HoneyBadger.webp": "/foreign_collective/static/media/HoneyBadger.8a8a2ea69d6d240b37f3.webp",
     "static/media/logo1.jpg": "/foreign_collective/static/media/logo1.1d6fc084d2fc1f58b5e5.jpg",
@@ -30,11 +36,11 @@
     "static/media/world.png": "/foreign_collective/static/media/world.534ecb4d5c95db4eeb55.png",
     "static/media/wt.avif": "/foreign_collective/static/media/wt.d03aee9369acb2100422.avif",
     "index.html": "/foreign_collective/index.html",
-    "main.65d88f4f.css.map": "/foreign_collective/static/css/main.65d88f4f.css.map",
-    "main.67fc324a.js.map": "/foreign_collective/static/js/main.67fc324a.js.map"
+    "main.3da81059.css.map": "/foreign_collective/static/css/main.3da81059.css.map",
+    "main.be5756ba.js.map": "/foreign_collective/static/js/main.be5756ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.65d88f4f.css",
-    "static/js/main.67fc324a.js"
+    "static/css/main.3da81059.css",
+    "static/js/main.be5756ba.js"
   ]
 }
