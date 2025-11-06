@@ -13,13 +13,11 @@ const HouseDialog = (props) => {
                         &times;
                     </span>
                     <div class="columns">
-                        <img src={"https://portiaportia.github.io/json/images/house-plans/"+props.main_image} alt="house" />
+                        <img src={"https://22Foreignsites.github.io/json/images/"+props.main_image} alt="volunteer" />
                         <div id="dialog-content">
-                            <h3>{props.name}</h3>
-                            <p>{props.bedrooms} Bedrooms</p>
-                            <p>{props.bathrooms} Bathrooms</p>
-                            <p>Size: {props.size} sqft</p>
-                            <p>Features: {props.features.join(", ")}</p>
+                            <h3>{props.title}</h3>
+                            <p>{props.description}</p>
+                            <p>Link: <a href={props.link}>{props.link}</a></p>
                         </div>
                     </div>
                 </div>
