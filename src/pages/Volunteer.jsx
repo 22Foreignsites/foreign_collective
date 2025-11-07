@@ -15,12 +15,13 @@ import ParkCleanUp from "../ImgGallery/ParkCleanUp.webp"
 import SoupKithcen from "../ImgGallery/SoupKitchen.webp"
 import HighwayCleanUp from "../ImgGallery/HighwayCleanup.webp"
 import Marathon from "../ImgGallery/Marathon.webp"
+import VolunteerList from "../components/VolunteerList.jsx";
 
 const Volunteer = () => {
 	return (
 		<> 
-		
-		<BigHeader image={cocky} title={"Volunteer"} />
+		<VolunteerList num="3" />
+		{/* <BigHeader image={cocky} title={"Volunteer"} />
 		<div className = "CardsCarousel">
 		<h1> Volunteer Individually</h1>
 		<CardsCarousel items={[
@@ -92,32 +93,9 @@ const Volunteer = () => {
 				description: "Organize and run community donation efforts — manage collection sites, coordinate volunteers, and ensure donations are distributed efficiently to those in need.",
 				link: "#"
 			},
-		]} />
-		</div>
-		{/* <div id="volunteer">
-			<VolunteerBoxes items={[
-
-				{
-					title: "Volunteering Individually",
-					text: "Help us plan and execute community events.",
-					img: trash,
-					href: "#"
-				},
-				{
-					title: "Community Clean-Up",
-					text: "Join us for a day of cleaning up our local parks.",
-					img: Community,
-					href: "#"
-				},
-				{
-					title: "Food Drive",
-					text: "Help us collect food for those in need.",
-					img: logo,
-					href: "#"
-				},
-				// Add more volunteer opportunities as needed
-			]} />
-		</div> */}
+		]} /> */}
+		{/* </div> */}
+		
 		</>
 	);
 };

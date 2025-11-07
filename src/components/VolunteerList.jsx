@@ -1,7 +1,8 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
-import "./../css/House.css";
-import House from "../components/House";
+import "./../css/VolunteerBoxes.css";
+import House from "../components/VolunteerBoxes";
+import Volunteer from "./Volunteer.jsx";
 
 const VolunteerList = (props) => {
     const [volunteers, setVolunteers] = useState([]);
@@ -10,7 +11,11 @@ const VolunteerList = (props) => {
     useEffect(()=>{
         const loadVolunteers = async() => {
             const response = await axios.get("https://foreigncollective-server.onrender.com/api/volunteers");
-            setVolunteers(response.data.splice(0,props.num));
+            // debug: inspect shape coming back from API
+            // console.log('volunteers response', response.data);
+            const data = Array.isArray(response.data) ? response.data : [];
+            const max = typeof props.num === 'number' ? props.num : data.length;
+            setVolunteers(data.slice(0, max));
         };
 
         loadVolunteers();
@@ -30,3 +35,5 @@ const VolunteerList = (props) => {
         </div>
     )
 };
+
+export default VolunteerList;
