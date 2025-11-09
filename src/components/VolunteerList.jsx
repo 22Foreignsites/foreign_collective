@@ -24,8 +24,8 @@ const VolunteerList = (props) => {
     return (
         <div id="volunteer-list" className="columns">
             {volunteers.map((volunteer)=>(
-                <Volunteer key={volunteer._id} 
-                        id={volunteer._id}
+                <Volunteer key={volunteer.id} 
+                        id={volunteer.id}
                         image={volunteer.image} 
                         title={volunteer.title}
                         description={volunteer.description}
