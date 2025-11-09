@@ -13,7 +13,7 @@ const HouseDialog = (props) => {
                         &times;
                     </span>
                     <div className="columns">
-                        <img src={"https://foreigncollective-server.onrender.com/images/IndvVol.webp"+props.image} alt="volunteer" />
+                        <img src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt="volunteer" />
                         <div id="dialog-content">
                             <h3>{props.title}</h3>
                             <p>{props.description}</p>
