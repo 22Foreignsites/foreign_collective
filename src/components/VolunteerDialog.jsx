@@ -1,6 +1,6 @@
 import "./../css/Dialog.css";
 
-const HouseDialog = (props) => {
+const VolunteerDialog = (props) => {
     return (
         <div id="house-dialog" className="w3-modal">
             <div className="w3-modal-content">
@@ -8,16 +8,16 @@ const HouseDialog = (props) => {
                     <span
                         id="dialog-close"
                         className="w3-button w3-display-topright"
-                        onClick={props.closeHouseDialog}
+                        onClick={props.closeVolunteerDialog}
                     >
                         &times;
                     </span>
                     <div className="columns">
-                        <img src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt="volunteer" />
+                        <img className="dialog-image" src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt={props.title || "volunteer"} />
                         <div id="dialog-content">
                             <h3>{props.title}</h3>
                             <p>{props.description}</p>
-                            <p>Link: <a href={props.link}>{props.link}</a></p>
+                            {props.link && <p>Link: <a href={props.link}>{props.link}</a></p>}
                         </div>
                     </div>
                 </div>
@@ -26,4 +26,4 @@ const HouseDialog = (props) => {
     );
 };
 
-export default HouseDialog;
+export default VolunteerDialog;
