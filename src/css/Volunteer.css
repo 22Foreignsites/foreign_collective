@@ -1,3 +1,7 @@
 .CardsCarousel {
   margin: 20px;
 }
+
+.volunteer img {
+  max-width: 100%;
+}
