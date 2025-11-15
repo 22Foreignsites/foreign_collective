@@ -24,7 +24,8 @@ const Volunteer = (props) => {
                     cta={props.cta} />
             ):("")}
             <section className="volunteer" onClick={showVolunteerDetails}>
-                 <img src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt="volunteer" />
+                 <img src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt="volunteer" /> 
+                {/* <img src={`http://localhost:3001/images/${props.image}`} alt={props.title || "volunteer"} /> */}
                 {/* <img src={props.image} alt={props.title || "volunteer"} /> */}
                 <div className="volunteer-description">
                     <h1>{props.title}</h1>
