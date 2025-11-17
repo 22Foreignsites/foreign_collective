@@ -2,7 +2,7 @@ import "./../css/Dialog.css";
 
 const VolunteerDialog = (props) => {
     return (
-        <div id="house-dialog" className="w3-modal">
+        <div id="volunteer-dialog" className="w3-modal">
             <div className="w3-modal-content">
                 <div className="w3-container">
                     <span
@@ -14,7 +14,6 @@ const VolunteerDialog = (props) => {
                     </span>
                     <div className="columns">
                         <img className="dialog-image" src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt={props.title || "volunteer"} />
-                        {/* <img className="dialog-image" src={`http://localhost:3001/images/${props.image}`} alt={props.title || "volunteer"} /> */}
                         <div id="dialog-content">
                             <h3>{props.title}</h3>
                             <p>{props.description}</p>

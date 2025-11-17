@@ -1,0 +1,49 @@
+/* Volunteer grid: arrange items into columns with 3 rows per column */
+#volunteer-list.volunteer-grid {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-rows: repeat(3, auto); /* 3 rows per column */
+	gap: 16px;
+	align-items: start;
+	justify-content: start;
+	padding: 12px;
+	overflow-x: auto; /* allow horizontal scroll if many columns */
+}
+
+/* make the items responsive on small screens: fallback to single column */
+@media (max-width: 720px) {
+	#volunteer-list.volunteer-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: auto;
+		overflow-x: visible;
+	}
+}
+
+/* add button styles */
+.add-volunteer-wrap{
+	display:flex;
+	gap:8px;
+	align-items:center;
+	margin: 12px;
+}
+
+#add-volunteer{
+	width:40px;
+	height:40px;
+	border-radius:8px;
+	background:#F28729;
+	color:#fff;
+	border:none;
+	font-size:20px;
+	cursor:pointer;
+}
+
+#add-volunteer-label{
+	background:transparent;
+	border:none;
+	color:#333;
+	font-weight:600;
+	cursor:pointer;
+}
+

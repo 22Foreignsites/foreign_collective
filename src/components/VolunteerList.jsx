@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 import "./../css/VolunteerBoxes.css";
+import "./../css/VolunteerList.css";
 import House from "../components/VolunteerBoxes";
 import Volunteer from "./Volunteer.jsx";
 import AddVolunteer from "./AddVolunteer.jsx";
@@ -40,14 +41,17 @@ const updateVolunteer = (volunteer) => {
     return (
         <>
 
-            <button id="add-volunteer" onClick={openAddDialog}>+</button>
+                        <div className="add-volunteer-wrap">
+                            <button id="add-volunteer" onClick={openAddDialog}>+</button>
+                            <button id="add-volunteer-label" onClick={openAddDialog}>Add volunteer</button>
+                        </div>
 
             {showAddVolunteerDialog?(<AddVolunteer
                 closeAddDialog={closeAddDialog}
                 updateVolunteer={updateVolunteer}
             />):("")}
 
-        <div id="volunteer-list" className="columns">
+        <div id="volunteer-list" className="volunteer-grid">
             {volunteers.map((volunteer)=>(
                 <Volunteer key={volunteer.id} 
                         id={volunteer.id}

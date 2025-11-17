@@ -1,4 +1,5 @@
 import "../css/Dialog.css";
+import "../css/AddVolunteer.css";
 import React, {useState} from "react";
 
 const AddVolunteerPlan = (props) => {
@@ -40,7 +41,7 @@ return(
                 <div className="w3-container">
                     <span id="dialog-close" className="w3-button w3-display-topright" onClick={props.closeAddDialog}>&times;</span>
                     <form id="add-property-form" onSubmit={addToServer}>
-                        <h3>Create New Volunteery</h3>
+                        <h3>Create New Volunteer</h3>
 
                     <p>
                         <label htmlFor="title"> Volunteer Title: </label>

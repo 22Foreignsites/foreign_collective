@@ -1,0 +1,80 @@
+/* Styles for AddVolunteer dialog */
+#add-dialog .w3-modal-content {
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+#add-property-form {
+  /* display: grid; */
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 820px;
+}
+
+#add-property-form h3{
+  margin: 0 0 6px 0;
+}
+
+#add-property-form label{
+  display:block;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+#add-property-form input[type="text"],
+#add-property-form input[type="url"],
+#add-property-form textarea{
+  width:100%;
+  padding:8px 10px;
+  border:1px solid #dcdcdc;
+  border-radius:6px;
+  box-sizing:border-box;
+}
+
+#add-property-form button[type="submit"]{
+  background: #F28729;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+#add-property-form button[type="submit"]:hover{
+  background:#919615;
+}
+
+.columns {
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+}
+
+#img-prev-section{
+  min-width: 160px;
+}
+
+#img-prev{
+  display:block;
+  max-width: 100%;
+  height: auto;
+  border-radius:8px;
+  border:1px solid #eee;
+}
+
+#img-upload label{
+  display:block;
+  margin-bottom:6px;
+}
+
+@media (min-width:720px){
+  #add-property-form{
+    grid-template-columns: 1fr 360px;
+  }
+  .columns {
+    flex-direction:column;
+  }
+  #img-upload{ order: 2 }
+}
