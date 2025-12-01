@@ -3,7 +3,9 @@ import React, {useState} from "react";
 const VolunteerEditDialog = (props) => {
 
     const [result, setResult] = useState("");
-    const [prevSrc, setPrevSrc] = useState("http://localhost:3001/images/" + props.main_image);
+    const [prevSrc, setPrevSrc] = useState
+    // ("http://localhost:3001/images/" + props.main_image);
+    ("https://foreigncollective-server.onrender.com/images/" + props.main_image);
 
     const uploadImage = (event) => {
         setPrevSrc(URL.createObjectURL(event.target.files[0]));
@@ -17,7 +19,10 @@ const VolunteerEditDialog = (props) => {
         const formData = new FormData(event.target);
         console.log(...formData);
 
-        const response = await fetch(`http://localhost:3001/api/volunteers/${props._id}`,{
+        // const response = await fetch(`http://localhost:3001/api/volunteers/${props.id}`
+        const response = await fetch(`https://foreigncollective-server.onrender.com/api/volunteers/${props.id}`,
+
+            {
             method: "PUT",
             body:formData
         });

@@ -27,12 +27,12 @@ const Volunteer = (props) => {
         <>
             {showDialog?(
                 <VolunteerDialog closeVolunteerDialog={closeVolunteerDetails}
-                    id={props.id}
-                    title={props.title}
-                    description={props.description}
-                    image={props.image}
-                    link={props.link}
-                    cta={props.cta}
+                    id={volunteer.id}
+                    title={volunteer.title}
+                    description={volunteer.description}
+                    image={volunteer.image}
+                    link={volunteer.link}
+                    cta={volunteer.cta}
                     updateVolunteer={updateVolunteer} 
                     hideVolunteer={hideVolunteer}
                 />
@@ -40,12 +40,12 @@ const Volunteer = (props) => {
 
             {showVolunteer?(
             <section className="volunteer" onClick={showVolunteerDetails}>
-                 {/* <img src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt="volunteer" />  */}
-                <img src={`http://localhost:3001/images/${props.image}`} alt={props.title || "volunteer"} />
+                 <img src={`https://foreigncollective-server.onrender.com/images/${volunteer.image}`} alt="volunteer" />
+                {/* <img src={`http://localhost:3001/images/${volunteer.image}`} alt={volunteer.title || "volunteer"} /> */}
                 {/* <img src={props.image} alt={props.title || "volunteer"} /> */}
                 <div className="volunteer-description">
-                    <h1>{props.title}</h1>
-                    <p>{props.description}</p>
+                    <h1>{volunteer.title}</h1>
+                    <p>{volunteer.description}</p>
                 </div>
             </section>
             ):("")}

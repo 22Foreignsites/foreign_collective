@@ -17,8 +17,8 @@ const addToServer = async (event) => {
     const formData = new FormData(event.target);
     console.log(...formData);
 
-    const response = await fetch("http://localhost:3001/api/volunteers", {
-    // const response = await fetch("https://foreigncollective-server.onrender.com/api/volunteers", {
+    // const response = await fetch("http://localhost:3001/api/volunteers", {
+    const response = await fetch("https://foreigncollective-server.onrender.com/api/volunteers", {
         method: "POST",
         body: formData
     });

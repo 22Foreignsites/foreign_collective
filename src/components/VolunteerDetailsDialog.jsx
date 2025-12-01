@@ -2,7 +2,9 @@ const VolunteerDetailsDialog = (props) => {
 
     return(
         <div className="columns">
-            <img className="dialog-image" src={"http://localhost:3001/images/"+props.main_image} alt="house" />
+            {/* <img className="dialog-image" src={"http://localhost:3001/images/"+props.main_image} alt="house" /> */}
+            <img className="dialog-image" src={"https://foreigncollective-server.onrender.com/images/"+props.main_image} alt="house" />
+
             <div id = "dialog-content">
                 <div className="columns"> 
                 <h3>{props.name}</h3>

@@ -4,7 +4,10 @@ const VolunteerDeleteDialog = (props) => {
     const [result, setResult] = useState("");
     
     const deleteVolunteer = async () => {
-        const response = await fetch (`http://localhost:3001/api/volunteers/${props.id}`, {
+        // const response = await fetch (`http://localhost:3001/api/volunteers/${props.id}`, 
+    const response = await fetch (`https://foreigncollective-server.onrender.com/api/volunteers/${props.id}`,
+            
+            {
         method: "DELETE"
     });
 
