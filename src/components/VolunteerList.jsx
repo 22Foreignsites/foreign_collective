@@ -26,8 +26,8 @@ const updateVolunteer = (volunteer) => {
     //after page has loaded
     useEffect(()=>{
         const loadVolunteers = async() => {
-            const response = await axios.get("https://foreigncollective-server.onrender.com/api/volunteers");
-            // const response = await axios.get("http://localhost:3001/api/volunteers"); 
+            // const response = await axios.get("https://foreigncollective-server.onrender.com/api/volunteers");
+            const response = await axios.get("http://localhost:3001/api/volunteers"); 
             // debug: inspect shape coming back from API
             // console.log('volunteers response', response.data);
             const data = Array.isArray(response.data) ? response.data : [];

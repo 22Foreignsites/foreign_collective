@@ -40,11 +40,19 @@
 }
 
 .dialog-image {
-  max-width: 320px;
-  width: 40%;
+  width: 100%;
+  max-width: 520px; /* best desktop size */
+  max-height: calc(80vh - 160px); /* keep image within viewport */
   height: auto;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
+  display: block;
+}
+
+/* layout when image and content are side-by-side */
+.columns > .dialog-image {
+  width: 48%;
+  max-width: none;
 }
 
 #img-prev {

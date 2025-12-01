@@ -3,7 +3,9 @@ import {useState} from "react";
 import VolunteerDialog from "./VolunteerDialog.jsx";
 
 const Volunteer = (props) => {
+    const [volunteer, setVolunteer] = useState(props);
     const [showDialog, setShowDialog] = useState(false);
+    const [showVolunteer, setShowVolunteer] = useState(true);
 
     const showVolunteerDetails = () => {
         setShowDialog(true);
@@ -12,6 +14,15 @@ const Volunteer = (props) => {
     const closeVolunteerDetails = () => {
         setShowDialog(false);
     }
+
+    const updateVolunteer = (volunteer) => {
+        setVolunteer(volunteer);
+    };
+
+    const hideVolunteer = () => {
+        setShowVolunteer(false);
+    };
+
     return (
         <>
             {showDialog?(
@@ -21,17 +32,23 @@ const Volunteer = (props) => {
                     description={props.description}
                     image={props.image}
                     link={props.link}
-                    cta={props.cta} />
+                    cta={props.cta}
+                    updateVolunteer={updateVolunteer} 
+                    hideVolunteer={hideVolunteer}
+                />
             ):("")}
+
+            {showVolunteer?(
             <section className="volunteer" onClick={showVolunteerDetails}>
-                 <img src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt="volunteer" /> 
-                {/* <img src={`http://localhost:3001/images/${props.image}`} alt={props.title || "volunteer"} /> */}
+                 {/* <img src={"https://foreigncollective-server.onrender.com/images/"+props.image} alt="volunteer" />  */}
+                <img src={`http://localhost:3001/images/${props.image}`} alt={props.title || "volunteer"} />
                 {/* <img src={props.image} alt={props.title || "volunteer"} /> */}
                 <div className="volunteer-description">
                     <h1>{props.title}</h1>
                     <p>{props.description}</p>
                 </div>
             </section>
+            ):("")}
         </>
     );
 };
